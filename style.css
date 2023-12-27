@@ -111,3 +111,12 @@ h2{
     border: none;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .github {
+       font-size: 1.2rem;
+    }
+    .abouttext div {
+       margin-left: 10%;
+    }
+   }
