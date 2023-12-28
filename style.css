@@ -1,122 +1,93 @@
-body{
-    background-color: #0f0f0f;
-}
-h1{
-    margin-top: 15%;
-    color: #e3e3e3;
-    font-size: 2rem;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-h2{
-    color: #e3e3e3;
-    font-size: 1.5rem;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1%;
-}
-.github{
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #e3e3e3;
-    font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.intro{
-    text-indent: 15%;
-}
-.space{
-    height: 10vh;
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-.about{
+
+body {
+    background-color: #131316;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    line-height: 0;
+}
+
+h1 {
+    line-height: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 50vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.hidden2 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(100%);
+    transition: opacity 1s ease-in-out, filter 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.hidden3 {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(100%);
+    transition: opacity 1s ease-in-out, filter 1s ease-in-out, transform 1s ease-in-out;
+}
+
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hidden2 a {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+.read{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #0f0f0f;
     font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #e3e3e3;
-    padding: 13px 17px;
-    border-radius: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
     text-align: center;
     display: inline-block;
-    margin-left: 14%;
     margin-top: 1%;
-    
-}
 
-.abouttext {
-    display: flex;
-    font-size: 1.5rem;
-    color: #fff;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-.abouttext div {
-    line-height: 1.5;
-    margin-left: 20%;
-}
-
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-  
-.reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-
-.fade-left {
-    animation: fade-left 1s ease;
-}
-
-@keyframes fade-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.fade-bottom {
-    animation: fade-bottom 1s ease;
-}
-
-@keyframes fade-bottom {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.social-button {
-    text-decoration: none;
-    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 3vh;
-    color: white;
-    text-align: center;
+.hr{
     display: block;
-    background-color: #1a1a1a;
-    padding: 15px 25px;
-    border-radius: 20px;
-    margin: 0 auto;
-    margin-bottom: 2vh;
-    border: none;
-    cursor: pointer;
+    height: 2px;
+}
+#href{
+    text-decoration: underline;
+    color: #c9c9c9;
 }
 
-@media (max-width: 768px) {
-    .github {
-       font-size: 1.2rem;
-    }
-    .abouttext div {
-       margin-left: 10%;
-    }
-   }
+.hidden2 img {
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+
+
