@@ -25,7 +25,8 @@ const hiddenElements = document.querySelectorAll('.hidden, .hidden2, .hidden3, .
 hiddenElements.forEach((el) => observer.observe(el));
 
 function scrollDown() {
-    var targetPosition = 1800;
+    var targetPosition = 400;
+    scroll-behaivior: smooth;
     document.documentElement.scrollTop = targetPosition;
 }
 
