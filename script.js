@@ -1,29 +1,31 @@
-function scrollDown() {
-    var targetPosition = 800;
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
+function scrollUp() {
+    console.log('Scrolling up...');
+    document.documentElement.scrollTop = 0;
+}
+
+window.onload = function() {
+    console.log('Page loaded, initiating scroll...');
+    setTimeout(function() {
+        scrollUp();
+    }, 100);
+};
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
     });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden, .hidden2, .hidden3, .read');
+hiddenElements.forEach((el) => observer.observe(el));
+
+function scrollDown() {
+    var targetPosition = 1800;
+    document.documentElement.scrollTop = targetPosition;
 }
-
-
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-reveal();
-
-window.addEventListener("scroll", reveal);
 
