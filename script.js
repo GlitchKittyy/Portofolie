@@ -26,7 +26,8 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 function scrollDown() {
     var targetPosition = 400;
-    scroll-behaivior: smooth;
-    document.documentElement.scrollTop = targetPosition;
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
 }
-
