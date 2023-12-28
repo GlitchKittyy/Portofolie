@@ -1,3 +1,12 @@
+function scrollDown() {
+    var targetPosition = 400;
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+}
+
+
 function scrollUp() {
     console.log('Scrolling up...');
     document.documentElement.scrollTop = 0;
@@ -24,10 +33,3 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden, .hidden2, .hidden3, .read');
 hiddenElements.forEach((el) => observer.observe(el));
 
-function scrollDown() {
-    var targetPosition = 400;
-    window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-    });
-}
