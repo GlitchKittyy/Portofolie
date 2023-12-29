@@ -79,7 +79,35 @@ section {
     display: block;
     height: 2px;
 }
+
 #href{
     text-decoration: underline;
     color: #c9c9c9;
+}
+
+.backgrounddark{
+    background-color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.hr.second {
+    display: block;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0;
+}
+#knoppen{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #0f0f0f;
+    font-family:'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e3e3e3;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 1%;
+    text-align: center;
+    display: inline-block;
+    border: #131316;
+
 }
